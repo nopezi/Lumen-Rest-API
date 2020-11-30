@@ -15,6 +15,21 @@ $router->get('/', function () use ($router) {
     return $router->app->version();
 });
 
+$router->get('/tes', function() {
+	return 'helo mencoba';
+});
+
+$router->get('/blog', 'BlogController@index');
+$router->get('/blog/cari', 'BlogController@cari');
+$router->post('/blog/tambah', 'BlogController@tambah');
+$router->post('/blog/edit', 'BlogController@edit');
+$router->delete('/blog/hapus', 'BlogController@hapus');
+
+$router->get('/kategori', 'KategoriController@index');
+$router->post('/kategori/tambah', 'KategoriController@tambah');
+$router->put('/kategori/edit', 'KategoriController@edit');
+$router->delete('/kategori/hapus', 'KategoriController@hapus');
+
 $router->group([
 	'prefix' => 'auth'
 ], function() use ($router) {
