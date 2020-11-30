@@ -11,6 +11,17 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // $this->call('UsersTableSeeder');
+        
+        $data = [
+        	'id_kategori' => 1,
+        	'judul'       => 'judul',
+        	'isi'		  => 'isi',
+        	'gambar'      => '90020226_1096043830750783_8017120447319506944_n.jpg',
+        	'created_at'  => date('Y-m-d'),
+        	'created_at'  => date('Y-m-d'),
+        ];
+
+        DB::table('posting')->insert($data);
+
     }
 }
