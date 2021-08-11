@@ -30,6 +30,10 @@ $router->post('/kategori/tambah', 'KategoriController@tambah');
 $router->put('/kategori/edit', 'KategoriController@edit');
 $router->delete('/kategori/hapus', 'KategoriController@hapus');
 
+# testing api
+$router->get('/api/tes/pertama', 'TestController@palindrome');
+$router->get('/api/tes/kedua', 'TestController@merge');
+
 $router->group([
 	'prefix' => 'auth'
 ], function() use ($router) {
