@@ -36,7 +36,7 @@
     "prefer-stable": true,
     "scripts": {
         "post-install-cmd": [
-             "php artisan clear-compiled",
+             "php clear-compiled",
              "chmod -R 777 public/"
          ],
         "post-root-package-install": [
